@@ -1,0 +1,493 @@
+<! DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="NEYDRA XAU/USD Predictive Analytics Engine - Advanced ML-driven trading signals with 87%+ accuracy">
+    <meta name="author" content="NEYDRA by Ilyes Jarray">
+    <meta name="theme-color" content="#000000">
+    
+    <title>XAU/USD Predictive Analytics Engine | NEYDRA</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" href="assets/icon.png" type="image/png">
+    <link rel="shortcut icon" href="assets/icon.png" type="image/png">
+    
+    <!-- External Libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.9.1/dist/chart.min.js"></script>
+    
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Full Black Screen Container -->
+    <div class="container">
+        <!-- Background Effects -->
+        <div class="background-effects">
+            <div class="noise"></div>
+            <div class="scanlines"></div>
+        </div>
+
+        <!-- Main Engine Container -->
+        <div class="engine-container">
+            
+            <!-- ===== HEADER SECTION ===== -->
+            <header class="header">
+                <div class="header-content">
+                    <!-- Logo -->
+                    <div class="logo-wrapper">
+                        <img src="assets/icon.png" alt="NEYDRA Logo" class="logo" loading="lazy">
+                    </div>
+                    
+                    <!-- Title Section -->
+                    <div class="title-section">
+                        <h1 class="title">
+                            XAU/USD <span class="neon-highlight">PREDICTIVE</span> ENGINE
+                        </h1>
+                        <p class="subtitle">Advanced ML-Driven Trading Signals | 87%+ Accuracy</p>
+                        <p class="tagline">Enterprise-Grade AI Analytics | Real-Time Market Feeds | Zero Downtime Guaranteed</p>
+                    </div>
+                    
+                    <!-- Status Badge -->
+                    <div class="status-badge">
+                        <span class="status-dot"></span>
+                        <span class="status-label">SYSTEM ACTIVE</span>
+                    </div>
+                </div>
+                
+                <!-- Header Background Image -->
+                <div class="header-bg" style="background-image: url('.assets/head-bg.png')"></div>
+            </header>
+
+            <!-- ===== ENGINE VISUAL SECTION ===== -->
+            <section class="engine-visual-section">
+                <div class="engine-visual">
+                    <!-- Engine Icon -->
+                    <div class="engine-icon-wrapper">
+                        <img src="assets/engine.png" alt="AI Engine" class="engine-icon" loading="lazy">
+                        <div class="engine-pulse"></div>
+                    </div>
+                    
+                    <!-- Engine Status -->
+                    <div class="engine-status">
+                        <div class="status-indicator">
+                            <span class="status-dot active"></span>
+                        </div>
+                        <div class="status-info">
+                            <span class="status-text">AI ENGINE: </span>
+                            <span class="status-value">ACTIVE</span>
+                        </div>
+                    </div>
+                    
+                    <!-- Engine Stats -->
+                    <div class="engine-stats">
+                        <div class="stat-item">
+                            <span class="stat-label">Models Running</span>
+                            <span class="stat-value">3</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-label">Data Processing</span>
+                            <span class="stat-value">LIVE</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-label">Latency</span>
+                            <span class="stat-value" id="latency">0ms</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ===== PRICE DISPLAY SECTION ===== -->
+            <section class="price-section">
+                <div class="section-header">
+                    <h2 class="section-title">Market Price Feed</h2>
+                    <span class="last-update" id="lastUpdate">Last Update: --:--:--</span>
+                </div>
+                
+                <div class="price-cards-grid">
+                    <!-- XAU Price Card -->
+                    <div class="price-card gold-card">
+                        <div class="card-header">
+                            <img src="assets/gold.png" alt="Gold Icon" class="card-icon" loading="lazy">
+                            <div class="card-title">
+                                <h3>Current XAU Price</h3>
+                                <span class="card-subtitle">Per Troy Ounce</span>
+                            </div>
+                        </div>
+                        <div class="card-content">
+                            <div class="price-display" id="currentPrice">$0.00</div>
+                            <div class="price-stats">
+                                <span class="price-change positive" id="priceChange">+0.00%</span>
+                                <span class="price-24h" id="price24h">24h:  --</span>
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            <div class="mini-chart" id="miniChart1"></div>
+                        </div>
+                    </div>
+
+                    <!-- USD Status Card -->
+                    <div class="price-card usd-card">
+                        <div class="card-header">
+                            <img src="assets/dollar.png" alt="USD Icon" class="card-icon" loading="lazy">
+                            <div class="card-title">
+                                <h3>USD Index Status</h3>
+                                <span class="card-subtitle">Market Strength</span>
+                            </div>
+                        </div>
+                        <div class="card-content">
+                            <div class="status-display" id="usdStatus">STABLE</div>
+                            <div class="price-stats">
+                                <span class="volatility-indicator" id="volatility">Volatility: <strong>Low</strong></span>
+                                <span class="correlation" id="correlation">Correlation: --</span>
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            <div class="strength-bar">
+                                <div class="strength-fill" id="strengthFill" style="width: 50%"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- XAU/USD Pair Card -->
+                    <div class="price-card pair-card">
+                        <div class="card-header">
+                            <div class="pair-icons">
+                                <img src="assets/gold.png" alt="Gold" class="pair-icon-small" loading="lazy">
+                                <span class="pair-separator">/</span>
+                                <img src="assets/dollar.png" alt="Dollar" class="pair-icon-small" loading="lazy">
+                            </div>
+                            <div class="card-title">
+                                <h3>XAU/USD Pair</h3>
+                                <span class="card-subtitle">Real-Time Rate</span>
+                            </div>
+                        </div>
+                        <div class="card-content">
+                            <div class="price-display pair-display" id="pairRate">2,050.00</div>
+                            <div class="price-stats">
+                                <span class="pair-change" id="pairChange">+15.50 pips</span>
+                                <span class="volume-indicator" id="volume">Volume: --</span>
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            <span class="timestamp" id="timestamp">-- seconds ago</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ===== PREDICTION SECTION ===== -->
+            <section class="prediction-section">
+                <div class="section-header">
+                    <h2 class="section-title">AI Prediction Model</h2>
+                    <span class="accuracy-badge" id="accuracyBadge">87% Accuracy</span>
+                </div>
+
+                <div class="prediction-grid">
+                    <!-- 24-Hour Forecast Card -->
+                    <div class="prediction-card forecast-card">
+                        <div class="card-top-border"></div>
+                        <h4 class="prediction-card-title">24-Hour Forecast</h4>
+                        <div class="prediction-content">
+                            <div class="forecast-icon" id="forecastIcon">📈</div>
+                            <div class="prediction-value" id="prediction24h">BULLISH</div>
+                            <div class="prediction-meta">
+                                <span class="confidence-label">Confidence: </span>
+                                <span class="confidence-value" id="confidence24h">87%</span>
+                            </div>
+                        </div>
+                        <div class="confidence-bar">
+                            <div class="confidence-fill" id="confidenceFill" style="width: 87%"></div>
+                        </div>
+                    </div>
+
+                    <!-- Trading Signal Card -->
+                    <div class="prediction-card signal-card">
+                        <div class="card-top-border"></div>
+                        <h4 class="prediction-card-title">Trading Signal</h4>
+                        <div class="prediction-content signal-content">
+                            <div class="signal-icon" id="signalIcon">🎯</div>
+                            <div class="signal-indicator" id="tradingSignal">BUY</div>
+                            <div class="signal-meta">
+                                <span class="signal-label">Signal Type:</span>
+                                <span class="signal-type" id="signalType">Strong Entry</span>
+                            </div>
+                        </div>
+                        <div class="signal-strength-bar">
+                            <div class="signal-strength-fill" id="signalStrengthFill" style="width: 75%"></div>
+                            <span class="signal-strength-text" id="signalStrengthText">Strong</span>
+                        </div>
+                    </div>
+
+                    <!-- Price Target Card -->
+                    <div class="prediction-card target-card">
+                        <div class="card-top-border"></div>
+                        <h4 class="prediction-card-title">Price Target (24h)</h4>
+                        <div class="prediction-content">
+                            <div class="target-icon">🎲</div>
+                            <div class="target-values">
+                                <div class="target-row">
+                                    <span class="target-label">Resistance:</span>
+                                    <span class="target-price" id="resistance">$2,150. 00</span>
+                                </div>
+                                <div class="target-row">
+                                    <span class="target-label">Support:</span>
+                                    <span class="target-price" id="support">$2,010.00</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="target-range-bar">
+                            <div class="current-position" id="currentPosition"></div>
+                        </div>
+                    </div>
+
+                    <!-- Model Performance Card -->
+                    <div class="prediction-card performance-card">
+                        <div class="card-top-border"></div>
+                        <h4 class="prediction-card-title">Model Performance</h4>
+                        <div class="prediction-content performance-content">
+                            <div class="model-list">
+                                <div class="model-item">
+                                    <span class="model-name">Random Forest</span>
+                                    <span class="model-accuracy">86%</span>
+                                </div>
+                                <div class="model-item">
+                                    <span class="model-name">Gradient Boost</span>
+                                    <span class="model-accuracy">88%</span>
+                                </div>
+                                <div class="model-item">
+                                    <span class="model-name">LSTM Neural</span>
+                                    <span class="model-accuracy">87%</span>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Risk Analysis Card -->
+                    <div class="prediction-card risk-card">
+                        <div class="card-top-border"></div>
+                        <h4 class="prediction-card-title">Risk Analysis</h4>
+                        <div class="prediction-content risk-content">
+                            <div class="risk-level" id="riskLevel">
+                                <span class="risk-label">Risk Level:</span>
+                                <span class="risk-value">MEDIUM</span>
+                            </div>
+                            <div class="risk-meter">
+                                <div class="risk-indicator" id="riskIndicator" style="width: 45%"></div>
+                            </div>
+                            <div class="risk-factors">
+                                <span class="factor">📊 Vol:  High</span>
+                                <span class="factor">📈 Trend: Up</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ===== CONTROL BUTTONS SECTION ===== -->
+            <section class="controls-section">
+                <div class="buttons-wrapper">
+                    <!-- Start Analysis Button -->
+                    <button class="btn btn-primary" id="startBtn" title="Start Real-Time Analysis">
+                        <div class="btn-icon-wrapper">
+                            <img src="assets/start-button.png" alt="Start" class="btn-icon" loading="lazy">
+                        </div>
+                        <span class="btn-text">START ANALYSIS</span>
+                        <span class="btn-subtext">Begin ML Prediction</span>
+                    </button>
+
+                    <!-- Pause Analysis Button -->
+                    <button class="btn btn-secondary" id="pauseBtn" title="Pause Analysis" disabled>
+                        <div class="btn-icon-wrapper">
+                            <img src="assets/pause-button.png" alt="Pause" class="btn-icon" loading="lazy">
+                        </div>
+                        <span class="btn-text">PAUSE</span>
+                        <span class="btn-subtext">Stop Updates</span>
+                    </button>
+
+                    <!-- Export Signals Button -->
+                    <button class="btn btn-tertiary" id="exportBtn" title="Export Trading Signals">
+                        <span class="btn-icon-text">📊</span>
+                        <span class="btn-text">EXPORT SIGNALS</span>
+                        <span class="btn-subtext">CSV Format</span>
+                    </button>
+
+                    <!-- Settings Button -->
+                    <button class="btn btn-settings" id="settingsBtn" title="Engine Settings">
+                        <span class="btn-icon-text">⚙️</span>
+                        <span class="btn-text">SETTINGS</span>
+                        <span class="btn-subtext">Configure</span>
+                    </button>
+
+                    <!-- Help Button -->
+                    <button class="btn btn-help" id="helpBtn" title="Help & Documentation">
+                        <span class="btn-icon-text">❓</span>
+                        <span class="btn-text">HELP</span>
+                        <span class="btn-subtext">Documentation</span>
+                    </button>
+                </div>
+
+                <!-- Quick Stats -->
+                <div class="quick-stats">
+                    <div class="stat">
+                        <span class="stat-icon">✅</span>
+                        <span class="stat-name">Signals Today</span>
+                        <span class="stat-value" id="signalsCount">0</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-icon">💰</span>
+                        <span class="stat-name">Profit/Loss</span>
+                        <span class="stat-value" id="pnl">+0%</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-icon">⚡</span>
+                        <span class="stat-name">Processing Speed</span>
+                        <span class="stat-value" id="processingSpeed">--ms</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ===== REAL-TIME DATA STREAM SECTION ===== -->
+            <section class="data-stream-section">
+                <div class="section-header">
+                    <h2 class="section-title">Real-Time Data Stream</h2>
+                    <div class="stream-controls">
+                        <button class="stream-btn" id="clearStreamBtn" title="Clear Stream">🗑️ Clear</button>
+                        <button class="stream-btn" id="pauseStreamBtn" title="Pause Stream">⏸️ Pause</button>
+                    </div>
+                </div>
+
+                <div class="stream-container">
+                    <div class="stream-log" id="dataStream">
+                        <div class="stream-entry init-entry">
+                            <span class="stream-timestamp">[INIT]</span>
+                            <span class="stream-message">Initializing XAU/USD Predictive Analytics Engine...</span>
+                        </div>
+                        <div class="stream-entry info-entry">
+                            <span class="stream-timestamp">[INFO]</span>
+                            <span class="stream-message">Connecting to real-time market feeds...</span>
+                        </div>
+                        <div class="stream-entry info-entry">
+                            <span class="stream-timestamp">[INFO]</span>
+                            <span class="stream-message">Loading machine learning models...</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Stream Legend -->
+                <div class="stream-legend">
+                    <div class="legend-item error-item">
+                        <span class="legend-color error"></span>
+                        <span class="legend-text">Error</span>
+                    </div>
+                    <div class="legend-item warning-item">
+                        <span class="legend-color warning"></span>
+                        <span class="legend-text">Warning</span>
+                    </div>
+                    <div class="legend-item info-item">
+                        <span class="legend-color info"></span>
+                        <span class="legend-text">Info</span>
+                    </div>
+                    <div class="legend-item success-item">
+                        <span class="legend-color success"></span>
+                        <span class="legend-text">Success</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ===== ANALYTICS DASHBOARD SECTION ===== -->
+            <section class="analytics-section">
+                <div class="section-header">
+                    <h2 class="section-title">Analytics Dashboard</h2>
+                    <div class="chart-controls">
+                        <select id="timeframeSelect" class="chart-control">
+                            <option value="1h">1 Hour</option>
+                            <option value="4h">4 Hours</option>
+                            <option value="1d" selected>1 Day</option>
+                            <option value="1w">1 Week</option>
+                            <option value="1m">1 Month</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="charts-container">
+                    <!-- Accuracy Metrics Chart -->
+                    <div class="chart-card accuracy-chart-card">
+                        <h4 class="chart-title">Model Accuracy Metrics</h4>
+                        <div class="chart-wrapper">
+                            <canvas id="accuracyChart"></canvas>
+                        </div>
+                        <div class="chart-footer">
+                            <span class="chart-note">Ensemble Model Performance</span>
+                        </div>
+                    </div>
+
+                    <!-- Signal Distribution Chart -->
+                    <div class="chart-card signal-chart-card">
+                        <h4 class="chart-title">Signal Distribution</h4>
+                        <div class="chart-wrapper">
+                            <canvas id="signalChart"></canvas>
+                        </div>
+                        <div class="chart-footer">
+                            <span class="chart-note">BUY / SELL / HOLD Ratio</span>
+                        </div>
+                    </div>
+
+                    <!-- Price Movement Chart -->
+                    <div class="chart-card price-chart-card">
+                        <h4 class="chart-title">XAU/USD Price Movement</h4>
+                        <div class="chart-wrapper">
+                            <canvas id="priceChart"></canvas>
+                        </div>
+                        <div class="chart-footer">
+                            <span class="chart-note">Real-Time Price Data</span>
+                        </div>
+                    </div>
+
+                    <!-- Volatility Chart -->
+                    <div class="chart-card volatility-chart-card">
+                        <h4 class="chart-title">Market Volatility</h4>
+                        <div class="chart-wrapper">
+                            <canvas id="volatilityChart"></canvas>
+                        </div>
+                        <div class="chart-footer">
+                            <span class="chart-note">Standard Deviation Analysis</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ===== FOOTER SECTION ===== -->
+            <footer class="footer">
+                <div class="footer-content">
+                    <div class="footer-section">
+                        <h5 class="footer-title">NEYDRA Platform</h5>
+                        <p class="footer-text">XAU/USD Predictive Analytics Engine v1.0</p>
+                        <p class="footer-text">Enterprise-Grade AI Trading Solution</p>
+                    </div>
+                    <div class="footer-section">
+                        <h5 class="footer-title">System Info</h5>
+                        <p class="footer-text">🔴 Status: <span class="status-active">ONLINE</span></p>
+                        <p class="footer-text">⚡ Uptime: <span id="uptimeCounter">00:00:00</span></p>
+                        <p class="footer-text">📊 Signals Processed: <span id="processedSignals">0</span></p>
+                    </div>
+                    <div class="footer-section">
+                        <h5 class="footer-title">Founder & CEO</h5>
+                        <p class="footer-text">Ilyes Jarray</p>
+                        <p class="footer-text">© 2025 NEYDRA - All Rights Reserved</p>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <p class="copyright">
+                        NEYDRA XAU/USD Predictive Analytics Engine | 24/7 Monitoring | Zero Downtime Architecture | 87%+ Accuracy Guaranteed
+                    </p>
+                </div>
+            </footer>
+        </div>
+    </div>
+
+    <!-- JavaScript Libraries & Scripts -->
+    <script src="../../js/chart.min.js"></script>
+    <script src="script.js" defer></script>
+</body>
+</html>

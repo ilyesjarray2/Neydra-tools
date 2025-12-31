@@ -1,0 +1,718 @@
+# ===================================================================
+# XAU/USD Predictive Analytics Engine - NEYDRA Platform
+# Python Dependencies and Requirements
+# Python Version: 3.8+
+# Founder & CEO: Ilyes Jarray
+# © 2025 - All Rights Reserved
+# ===================================================================
+
+# ===================================================================
+# WEB FRAMEWORK & API (Core Web Services)
+# ===================================================================
+
+# Flask Web Framework
+Flask==2.3.3
+Flask-RESTful==0.3.10
+Flask-CORS==4.0.0
+Flask-Limiter==3.5.0
+Flask-SQLAlchemy==3.0.5
+Werkzeug==2.3.7
+
+# ASGI/WSGI Servers
+gunicorn==21.2.0
+uvicorn==0.23.2
+uvicorn[standard]==0.23.2
+asgiref==3.7.1
+
+# Async Web Support
+asyncio-contextmanager==1.0.0
+
+# WebSocket Support
+websockets==11.0.3
+python-socketio==5.9.0
+python-socketio[client]==5.9.0
+aiohttp==3.8.5
+aiofiles==23.1.0
+
+# ===================================================================
+# DATA PROCESSING & ANALYSIS (Core Data Science Stack)
+# ===================================================================
+
+# Numerical Computing
+numpy==1.24.3
+scipy==1.11.2
+
+# Data Manipulation & Analysis
+pandas==2.0.3
+pandas-profiling==3.7.0
+openpyxl==3.1.2
+
+# Data Validation
+pydantic==2.2.0
+marshmallow==3.19.0
+jsonschema==4.19.0
+
+# Time Series Analysis
+statsmodels==0.14.0
+tslearn==0.6.3
+pmdarima==2.0.4
+
+# ===================================================================
+# MACHINE LEARNING (Core ML Stack)
+# ===================================================================
+
+# Scikit-learn - Machine Learning
+scikit-learn==1.3.0
+scikit-optimize==0.9.1
+scikit-multilearn==0.2.0
+
+# Deep Learning Frameworks
+tensorflow==2.13.0
+keras==2.13.0
+torch==2.0.1
+torchvision==0.15.1
+
+# Gradient Boosting
+xgboost==2.0.0
+lightgbm==4.0.0
+catboost==1.2.0
+
+# Hyperparameter Optimization
+optuna==3.13.0
+hyperopt==0.2.5
+
+# Ensemble Methods
+mlxtend==0.23.0
+stacking==0.2.2
+
+# Feature Engineering
+feature-engine==1.6.1
+featuretools==1.27.0
+
+# AutoML
+auto-sklearn==0.15.0
+
+# ===================================================================
+# DATABASE & ORM (Data Persistence)
+# ===================================================================
+
+# PostgreSQL Driver
+psycopg2-binary==2.9.7
+psycopg==3.1.9
+pg8000==1.29.8
+
+# SQLAlchemy ORM
+SQLAlchemy==2.0.21
+sqlalchemy-utils==0.41.1
+sqlalchemy-json==0.5.0
+
+# Database Migrations
+alembic==1.12.0
+
+# Redis Cache
+redis==5.0.0
+hiredis==2.2.3
+
+# MongoDB
+pymongo==4.4.1
+mongoengine==0.28.0
+
+# Database Connection Pooling
+pooling==0.1.4
+
+# ===================================================================
+# CACHE & QUEUE SYSTEMS
+# ===================================================================
+
+# Caching
+cachetools==5.3.1
+requests-cache==1.1.0
+
+# Task Queue
+celery==5.3.1
+kombu==5.3.2
+redis==5.0.0
+
+# Job Scheduling
+APScheduler==3.10.4
+schedule==1.2.0
+
+# ===================================================================
+# HTTP & API CLIENTS (Data Fetching)
+# ===================================================================
+
+# HTTP Requests
+requests==2.31.0
+httpx==0.24.1
+aiohttp==3.8.5
+urllib3==2.0.4
+
+# API Client Libraries
+oandapyV20==0.7.0
+alpha-vantage==2.3.1
+finnhub==1.3.4
+iex-cloud==1.3.0
+
+# Rate Limiting & Throttling
+limits==3.6.0
+ratelimit==2.2.1
+
+# ===================================================================
+# AUTHENTICATION & SECURITY (Access Control)
+# ===================================================================
+
+# JWT Token Management
+PyJWT==2.8.0
+python-jose==3.3.0
+
+# Password Hashing
+bcrypt==4.0.1
+passlib==1.7.4
+argon2-cffi==23.1.0
+
+# Cryptography
+cryptography==41.0.3
+PyCryptodome==3.18.0
+
+# Environment Configuration
+python-dotenv==1.0.0
+
+# CORS Handling
+Flask-CORS==4.0.0
+
+# ===================================================================
+# MONITORING, LOGGING & OBSERVABILITY
+# ===================================================================
+
+# Logging
+python-json-logger==2.0.7
+logging-loki==0.3.2
+python-syslog==1.2.3
+
+# Error Tracking
+sentry-sdk==1.32.0
+
+# Metrics & Monitoring
+prometheus-client==0.17.1
+pyprometheus==0.5.1
+
+# Application Performance Monitoring
+dd-trace==1.17.0
+opentelemetry-api==1.20.0
+opentelemetry-sdk==1.20.0
+opentelemetry-exporter-jaeger==1.20.0
+
+# Health Checks
+py-healthchecks==1.0.2
+
+# ===================================================================
+# DATA VISUALIZATION (Analytics & Dashboards)
+# ===================================================================
+
+# Static Visualization
+matplotlib==3.7.2
+seaborn==0.12.2
+plotly==5.16.1
+bokeh==3.3.0
+
+# Interactive Dashboards
+streamlit==1.27.0
+dash==2.14.0
+dash-bootstrap-components==1.4.2
+
+# ===================================================================
+# TIME & DATE HANDLING
+# ===================================================================
+
+# Timezone & Date Utilities
+pytz==2023.3
+python-dateutil==2.8.2
+pendulum==2.1.2
+arrow==1.3.0
+
+# ===================================================================
+# CONFIGURATION & UTILITIES
+# ===================================================================
+
+# Configuration Management
+python-dotenv==1.0.0
+PyYAML==6.0.1
+toml==0.10.2
+configparser==6.0.0
+
+# CLI & Command Line Tools
+click==8.1.7
+typer==0.9.0
+rich==13.5.2
+colorama==0.4.6
+
+# ID Generation
+uuid6==1.0.3
+shortuuid==1.0.11
+python-ulid==1.1.0
+
+# Utilities
+toolz==0.12.0
+more-itertools==10.1.0
+six==1.16.0
+
+# ===================================================================
+# FILE HANDLING & PROCESSING
+# ===================================================================
+
+# Excel Files
+openpyxl==3.1.2
+xlrd==2.0.1
+xlsxwriter==3.1.2
+
+# PDF Files
+pdfplumber==0.10.2
+PyPDF2==3.0.1
+
+# CSV & Text
+csvkit==1.0.7
+
+# JSON Processing
+jsonlines==4.0.0
+ndjson==0.3.1
+
+# ===================================================================
+# TESTING & QUALITY ASSURANCE
+# ===================================================================
+
+# Testing Framework
+pytest==7.4.0
+pytest-cov==4.1.0
+pytest-asyncio==0.21.1
+pytest-flask==1.2.0
+pytest-mock==3.11.1
+pytest-timeout==2.1.0
+pytest-xdist==3.3.1
+
+# Coverage Analysis
+coverage==7.3.0
+
+# Test Data Generation
+faker==19.6.1
+hypothesis==6.82.0
+factory-boy==3.3.0
+
+# API Testing
+requests-mock==1.11.0
+responses==0.23.3
+
+# ===================================================================
+# CODE QUALITY & LINTING
+# ===================================================================
+
+# Linting
+pylint==2.17.5
+flake8==6.1.0
+flake8-docstrings==1.7.0
+flake8-bugbear==23.9.16
+pycodestyle==2.11.0
+
+# Code Formatting
+black==23.9.1
+autopep8==2.0.2
+
+# Import Sorting
+isort==5.12.0
+
+# Type Checking
+mypy==1.5.1
+types-requests==2.31.0.2
+types-PyYAML==6.0.12. 11
+
+# Security Linting
+bandit==1.7.5
+safety==2.3.5
+
+# ===================================================================
+# PERFORMANCE & PROFILING
+# ===================================================================
+
+# Performance Analysis
+py-spy==0.3.14
+memory-profiler==0.61.0
+line-profiler==4.0.3
+scalene==1.5.38
+
+# Benchmarking
+pytest-benchmark==4.0.0
+
+# ===================================================================
+# DEVELOPMENT & INTERACTIVE TOOLS
+# ===================================================================
+
+# Interactive Python Shell
+ipython==8.15.0
+ipdb==0.13.13
+ipywidgets==8.1.0
+
+# Jupyter Notebook
+jupyter==1.0.0
+jupyter-notebook==6.5.4
+jupyterlab==4.0.4
+notebook==6.5.4
+jupyterlab-widgets==3.0.9
+
+# ===================================================================
+# DOCUMENTATION & STATIC ANALYSIS
+# ===================================================================
+
+# Documentation Generation
+Sphinx==7.2.6
+sphinx-rtd-theme==1.3.0
+sphinx-autodoc-typehints==1.24.0
+sphinx-napoleon==0.7
+
+# ReStructuredText
+docutils==0.20.1
+
+# ===================================================================
+# DEPLOYMENT & PRODUCTION
+# ===================================================================
+
+# Production Servers
+gunicorn==21.2.0
+uwsgi==2.0.22
+waitress==2.1.2
+
+# Reverse Proxy
+whitenoise==6.5.0
+
+# Process Management
+supervisor==4.2.5
+
+# ===================================================================
+# NOTIFICATION & MESSAGING SERVICES
+# ===================================================================
+
+# Slack Integration
+slack-sdk==3.23.0
+slackclient==1.3.2
+
+# Telegram Bot
+python-telegram-bot==20.2
+
+# Email Services
+sendgrid==6.10.0
+Flask-Mail==0.9.1
+
+# SMS Services
+twilio==8.10.0
+
+# ===================================================================
+# STREAMING & MESSAGE QUEUES
+# ===================================================================
+
+# Kafka
+kafka-python==2.0.2
+confluent-kafka==2.2.0
+
+# RabbitMQ
+pika==1.3.2
+
+# Apache Spark (Optional)
+pyspark==3.5.0
+
+# ===================================================================
+# CLOUD INTEGRATIONS
+# ===================================================================
+
+# AWS
+boto3==1.28.15
+botocore==1.31.15
+s3fs==2023.9.1
+aioboto3==12.0.0
+
+# Google Cloud
+google-cloud-storage==2.10.0
+google-cloud-bigquery==3.12.0
+google-cloud-pubsub==2.18.4
+
+# Azure
+azure-storage-blob==12.17.0
+azure-cosmos==4.5.1
+azure-identity==1.14.0
+
+# ===================================================================
+# GRPC & PROTOBUF (Microservices)
+# ===================================================================
+
+# gRPC
+grpcio==1.58.0
+grpcio-tools==1.58.0
+
+# Protocol Buffers
+protobuf==4.24.2
+
+# ===================================================================
+# TIME SERIES & FORECASTING
+# ===================================================================
+
+# Time Series Forecasting
+prophet==1.1.5
+statsmodels==0.14.0
+sktime==0.13.4
+
+# Anomaly Detection
+pyod==1.1.2
+
+# ===================================================================
+# SENTIMENT & NLP (Optional)
+# ===================================================================
+
+# Natural Language Processing
+nltk==3.8.1
+textblob==0.17.1
+transformers==4.32.1
+
+# Sentiment Analysis
+vader-sentiment==3.3.2
+
+# ===================================================================
+# IMAGE PROCESSING (Optional)
+# ===================================================================
+
+# Image Processing
+Pillow==10.0.0
+scikit-image==0.21.0
+opencv-python==4.8.1.78
+
+# ===================================================================
+# OPTIONAL:  ADVANCED FEATURES
+# ===================================================================
+
+# Graph Databases
+neo4j==5.11.0
+
+# Search Engines
+elasticsearch==8.9.0
+
+# Data Versioning
+dvc==3.32.0
+
+# Experiment Tracking
+mlflow==2.7.1
+
+# Model Serving
+bentoml==1.1.0
+
+# ===================================================================
+# VERSION PINNING NOTES
+# ===================================================================
+
+# Core Versions Rationale: 
+# 
+# - TensorFlow 2.13.0:  Latest stable with excellent GPU support
+# - scikit-learn 1.3.0:  Latest with performance improvements
+# - pandas 2.0.3:        Major version with 3x speedups
+# - numpy 1.24.3:        Compatible with TensorFlow and scikit-learn
+# - Flask 2.3.3:         Latest stable for production
+# - SQLAlchemy 2.0.21:   Latest with async support
+# - PostgreSQL drivers:    Latest with connection pooling
+#
+# All versions tested together for compatibility
+# Check requirements-freeze.txt for exact deployment versions
+
+# ===================================================================
+# INSTALLATION INSTRUCTIONS
+# ===================================================================
+
+# Standard Installation: 
+#   pip install -r requirements.txt
+#
+# With GPU Support (CUDA 11.8+):
+#   pip install -r requirements. txt
+#   # TensorFlow GPU will be used if CUDA toolkit is installed
+#
+# Minimal Installation (Core Only):
+#   pip install numpy pandas scikit-learn tensorflow flask \
+#               psycopg2-binary redis sqlalchemy
+#
+# Development Installation (includes testing/linting):
+#   pip install -r requirements. txt
+#   pip install -r requirements-dev.txt
+#
+# Faster Installation (no cache):
+#   pip install --no-cache-dir -r requirements.txt
+#
+# Update All Packages:
+#   pip install --upgrade -r requirements.txt
+#
+# Generate Frozen Requirements:
+#   pip freeze > requirements-freeze.txt
+#
+# Check for Vulnerabilities:
+#   pip install pip-audit
+#   pip-audit
+
+# ===================================================================
+# COMPATIBILITY & SYSTEM REQUIREMENTS
+# ===================================================================
+
+# Python:  3.8, 3.9, 3.10, 3.11, 3.12
+# OS: Linux (recommended), macOS, Windows
+# RAM: 4GB minimum, 8GB+ recommended
+# Disk: 5GB+ for dependencies and models
+# GPU: Optional (CUDA 11.8+, cuDNN 8.6+)
+
+# ===================================================================
+# PLATFORM-SPECIFIC NOTES
+# ===================================================================
+
+# Linux (Ubuntu/Debian):
+#   sudo apt-get install python3-dev postgresql-client libpq-dev
+#   pip install -r requirements.txt
+#
+# macOS:
+#   brew install python@3.11 postgresql redis
+#   pip install -r requirements.txt
+#
+# macOS M1/M2/M3 (Apple Silicon):
+#   pip install tensorflow-macos==2.13.0
+#   pip install tensorflow-metal==1.0.0
+#   pip install -r requirements.txt
+#
+# Windows:
+#   choco install python postgresql redis
+#   pip install -r requirements.txt
+
+# ===================================================================
+# PERFORMANCE OPTIMIZATION
+# ===================================================================
+
+# For Better Performance:
+#
+# 1. Use compiled extensions: 
+#    pip install python-Levenshtein==0.21.1
+#
+# 2. For PostgreSQL (pgBouncer):
+#    apt-get install pgbouncer
+#
+# 3. For Redis clustering:
+#    pip install redis-py-cluster
+#
+# 4. For NumPy optimization:
+#    pip install scikit-learn-intel
+#
+# 5. For TensorFlow optimization:
+#    pip install tensorflow-intel
+
+# ===================================================================
+# SECURITY BEST PRACTICES
+# ===================================================================
+
+# Before Deployment:
+#
+# 1. Audit dependencies for vulnerabilities:
+#    pip install pip-audit
+#    pip-audit
+#
+# 2. Check license compliance:
+#    pip install pip-licenses
+#    pip-licenses
+#
+# 3. Verify package integrity:
+#    pip install safety
+#    safety check
+#
+# 4. Keep dependencies updated:
+#    pip install --upgrade pip setuptools wheel
+#
+# 5. Use virtual environments:
+#    python -m venv venv
+#    source venv/bin/activate
+
+# ===================================================================
+# TROUBLESHOOTING COMMON ISSUES
+# ===================================================================
+
+# Issue: "ModuleNotFoundError: No module named 'tensorflow'"
+# Solution: pip install tensorflow==2.13.0
+#
+# Issue: "psycopg2 installation fails"
+# Solution: 
+#   Ubuntu:  sudo apt-get install libpq-dev
+#   macOS: brew install postgresql
+#
+# Issue: "numpy version conflict"
+# Solution: pip install --upgrade numpy
+#
+# Issue:  "Permission denied during install"
+# Solution: pip install --user -r requirements.txt
+#
+# Issue: "Out of memory during installation"
+# Solution: pip install --no-cache-dir -r requirements.txt
+#
+# Issue: "CUDA/GPU not detected"
+# Solution: 
+#   nvidia-smi  # Verify CUDA is installed
+#   pip install tensorflow[and-cuda]==2.13.0
+
+# ===================================================================
+# DEPENDENCY MANAGEMENT
+# ===================================================================
+
+# To freeze current environment:
+#   pip freeze > requirements-freeze.txt
+#
+# To see outdated packages:
+#   pip list --outdated
+#
+# To check dependency tree:
+#   pip install pipdeptree
+#   pipdeptree
+#
+# To find conflicting packages:
+#   pip check
+#
+# To generate minimal requirements:
+#   pip install pipreqs
+#   pipreqs .  --force
+
+# ===================================================================
+# DOCKER CONSIDERATIONS
+# ===================================================================
+
+# For Docker builds, use: 
+#   pip install --no-cache-dir --no-deps -r requirements.txt
+#
+# Multi-stage builds optimize image size:
+#   FROM python: 3.11 as builder
+#   COPY requirements.txt .
+#   RUN pip install --user -r requirements.txt
+#
+#   FROM python:3.11-slim
+#   COPY --from=builder /root/.local /root/.local
+#   ENV PATH=/root/.local/bin:$PATH
+
+# ===================================================================
+# ENVIRONMENT-SPECIFIC REQUIREMENTS
+# ===================================================================
+
+# Development:  requirements. txt + requirements-dev.txt
+# Testing: requirements.txt + pytest packages
+# Production: requirements-freeze.txt
+# GPU: requirements. txt + tensorflow-gpu
+# CPU-Only: requirements.txt (remove tensorflow-gpu)
+
+# ===================================================================
+# FINAL CHECKLIST
+# ===================================================================
+
+# Before going to production:
+# ✓ pip audit - check for vulnerabilities
+# ✓ pip check - check for conflicts
+# ✓ python -m pytest - run all tests
+# ✓ coverage report - verify test coverage >80%
+# ✓ pip freeze - generate exact versions
+# ✓ docker build - build container
+# ✓ docker run - test container
+# ✓ Load test - verify performance
+# ✓ Security scan - check dependencies
+# ✓ Documentation - update INSTALL.md
+
+# ===================================================================
