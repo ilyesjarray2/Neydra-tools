@@ -495,8 +495,8 @@ function initializeCharts() {
             labels: ['Accuracy', 'Error Margin'],
             datasets: [{
                 data: [87, 13],
-                backgroundColor: ['#ff0080', '#1a1a1a'],
-                borderColor: ['#00ff00', '#333333'],
+                backgroundColor: ['#ff0000ff', '#000000ff'],
+                borderColor: ['#00ff00', '#000000ff'],
                 borderWidth: 2,
                 borderRadius: 5
             }]
@@ -539,12 +539,12 @@ function initializeCharts() {
             scales: {
                 x: {
                     ticks: { color: '#ffffff' },
-                    grid: { color:  'rgba(255, 0, 128, 0.1)' },
+                    grid: { color:  'rgba(255, 0, 0, 0.1)' },
                     beginAtZero: true
                 },
                 y: {
                     ticks: { color: '#ffffff' },
-                    grid: { color: 'rgba(255, 0, 128, 0.1)' }
+                    grid: { color: 'rgba(255, 0, 0, 0.1)' }
                 }
             }
         }
@@ -559,13 +559,13 @@ function initializeCharts() {
             datasets: [{
                 label: 'XAU/USD Price',
                 data: [],
-                borderColor: '#ff0080',
-                backgroundColor: 'rgba(255, 0, 128, 0.1)',
+                borderColor: '#ff0000ff',
+                backgroundColor: 'rgba(255, 0, 0, 0.1)',
                 borderWidth: 2,
                 fill: true,
                 tension: 0.4,
                 pointBackgroundColor: '#00ff00',
-                pointBorderColor: '#ff0080',
+                pointBorderColor: '#ff0000ff',
                 pointRadius: 4,
                 pointHoverRadius: 6,
                 pointBorderWidth: 2
@@ -576,11 +576,11 @@ function initializeCharts() {
             scales: {
                 x: {
                     ticks: { color: '#ffffff' },
-                    grid: { color: 'rgba(255, 0, 128, 0.1)' }
+                    grid: { color: 'rgba(255, 0, 0, 0.1)' }
                 },
                 y: {
                     ticks: { color: '#ffffff' },
-                    grid: { color: 'rgba(255, 0, 128, 0.1)' }
+                    grid: { color: 'rgba(255, 0, 0, 0.1)' }
                 }
             }
         }
@@ -595,13 +595,13 @@ function initializeCharts() {
             datasets: [{
                 label: 'Volatility (%)',
                 data:  [],
-                borderColor: '#00ffff',
-                backgroundColor: 'rgba(0, 255, 255, 0.1)',
+                borderColor: '#ff0000ff',
+                backgroundColor: 'rgba(255, 0, 0, 0.1)',
                 borderWidth: 2,
                 fill: true,
                 tension: 0.4,
-                pointBackgroundColor: '#ff0080',
-                pointBorderColor: '#00ffff',
+                pointBackgroundColor: '#ff0000ff',
+                pointBorderColor: '#ff0000ff',
                 pointRadius: 3,
                 pointHoverRadius:  5
             }]
@@ -611,11 +611,11 @@ function initializeCharts() {
             scales: {
                 x: {
                     ticks: { color: '#ffffff' },
-                    grid: { color: 'rgba(0, 255, 255, 0.1)' }
+                    grid: { color: 'rgba(255, 0, 0, 0.1)' }
                 },
                 y: {
                     ticks: { color: '#ffffff' },
-                    grid:  { color: 'rgba(0, 255, 255, 0.1)' },
+                    grid:  { color: 'rgba(255, 0, 0, 0.1)' },
                     beginAtZero:  true
                 }
             }
@@ -765,7 +765,7 @@ function exportSignals() {
 function openSettings() {
     const settingsHTML = `
         <div style="color: #00ff00; text-align: left; font-family: monospace;">
-            <h3 style="color: #ff0080; margin-bottom: 15px;">⚙️ ENGINE SETTINGS</h3>
+            <h3 style="color: #ff0000ff; margin-bottom: 15px;">⚙️ ENGINE SETTINGS</h3>
             <div style="margin-bottom:  10px;">
                 <label style="display: block; margin-bottom: 5px;">🔊 Sound Effects:</label>
                 <input type="checkbox" ${CONFIG.SOUNDS_ENABLED ? 'checked' : ''} id="soundToggle">
@@ -779,7 +779,7 @@ function openSettings() {
                 <input type="number" value="${CONFIG.UPDATE_INTERVAL}" id="intervalInput" style="background: #1a1a1a; color: #00ff00; border: 1px solid #00ff00; padding: 5px;">
             </div>
             <div style="text-align: right; margin-top: 20px;">
-                <button onclick="saveSettings()" style="background: #ff0080; color: white; border: none; padding: 8px 16px; cursor: pointer; margin-right: 10px; border-radius: 4px;">Save</button>
+                <button onclick="saveSettings()" style="background: #ff0000ff; color: white; border: none; padding: 8px 16px; cursor: pointer; margin-right: 10px; border-radius: 4px;">Save</button>
                 <button onclick="alert('Settings closed')" style="background: #333; color: #fff; border: 1px solid #666; padding: 8px 16px; cursor: pointer; border-radius: 4px;">Cancel</button>
             </div>
         </div>
@@ -821,7 +821,7 @@ XAU/USD PREDICTIVE ANALYTICS ENGINE - HELP
   • C: Clear Stream
   • ?:  Help
 
-For more info:  https://neydra.io/docs
+
     `;
 
     alert(helpHTML);
@@ -947,5 +947,5 @@ window.XAUEngine = {
     config: CONFIG
 };
 
-console.log('%c🚀 XAU/USD Predictive Analytics Engine v1.0', 'color: #ff0080; font-size: 16px; font-weight: bold;');
+console.log('%c🚀 XAU/USD Predictive Analytics Engine v1.0', 'color: #ff0000ff; font-size: 16px; font-weight: bold;');
 console.log('%cEnter window.XAUEngine in console to access engine controls', 'color: #00ff00; font-size: 12px;');
