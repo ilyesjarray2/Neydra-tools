@@ -665,17 +665,10 @@ body::before {
     height: 60px;
     width: 60px;
     filter: drop-shadow(0 0 10px var(--accent-gold));
-    animation: rotateIcon 10s linear infinite;
+    
 }
 
-@keyframes rotateIcon {
-    0% {
-        transform: rotate(0deg);
-    }
-    100% {
-        transform: rotate(360deg);
-    }
-}
+
 
 .card-title {
     flex: 1;
@@ -1448,13 +1441,13 @@ body::before {
 
 .stream-log::-webkit-scrollbar-track {
     background:  rgba(0, 0, 0, 0.3);
-    border-radius: 1px;
+    border-radius: 2px;
 }
 
 .stream-log::-webkit-scrollbar-thumb {
     background: var(--primary-neon);
-    border-radius: 1px;
-    box-shadow: 0 0 1px var(--primary-neon);
+    border-radius: 2px;
+    box-shadow: 0 0 4px var(--primary-neon);
 }
 
 .stream-log::-webkit-scrollbar-thumb:hover {
