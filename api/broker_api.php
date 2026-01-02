@@ -36,7 +36,7 @@ class Config {
     public static $ALPHA_VANTAGE = [
         'enabled' => getenv('ALPHAVANTAGE_ENABLED') ?: true,
         'endpoint' => 'https://www.alphavantage.co/query',
-        'api_key' => getenv('ALPHAVANTAGE_API_KEY') ?: 'YOUR_ALPHA_VANTAGE_KEY',
+        'api_key' => getenv('ALPHAVANTAGE_API_KEY') ?: 'XX7L2K09IBKCD5SH',
         'timeout' => 10
     ];
 
@@ -44,7 +44,7 @@ class Config {
     public static $FINNHUB = [
         'enabled' => getenv('FINNHUB_ENABLED') ?: true,
         'endpoint' => 'https://finnhub.io/api/v1',
-        'api_key' => getenv('FINNHUB_API_KEY') ?: 'YOUR_FINNHUB_KEY',
+        'api_key' => getenv('FINNHUB_API_KEY') ?: 'd5c18i9r01qsbmght95gd5c18i9r01qsbmght960',
         'timeout' => 10
     ];
 
